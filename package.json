@@ -1,0 +1,11 @@
+{
+  "name": "spring-boot-integrated-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "mvnw spring-boot:run",
+    "start": "mvnw spring-boot:run",
+    "build": "mvnw package",
+    "test": "mvnw test"
+  }
+}
