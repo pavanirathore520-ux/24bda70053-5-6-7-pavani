@@ -1,31 +1,31 @@
 :root {
-    --bg-app: #f8fafc;
-    --bg-card: #ffffff;
-    --bg-card-subtle: #f1f5f9;
-    --border-color: #e2e8f0;
-    --border-color-focus: #6366f1;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
-    --text-light: #94a3b8;
+    --bg-app: #0f172a;
+    --bg-card: rgba(30, 41, 59, 0.5);
+    --bg-card-subtle: rgba(15, 23, 42, 0.4);
+    --border-color: rgba(148, 163, 184, 0.2);
+    --border-color-focus: #818cf8;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-light: #64748b;
     
-    --primary: #4f46e5;
-    --primary-hover: #4338ca;
-    --primary-light: #eef2ff;
-    --primary-border: #c7d2fe;
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --primary-light: rgba(99, 102, 241, 0.2);
+    --primary-border: rgba(99, 102, 241, 0.3);
     
-    --success: #059669;
-    --success-light: #ecfdf5;
-    --success-border: #a7f3d0;
+    --success: #10b981;
+    --success-light: rgba(16, 185, 129, 0.15);
+    --success-border: rgba(16, 185, 129, 0.3);
     
-    --warning: #d97706;
-    --warning-light: #fffbeb;
-    --warning-border: #fde68a;
+    --warning: #f59e0b;
+    --warning-light: rgba(245, 158, 11, 0.15);
+    --warning-border: rgba(245, 158, 11, 0.3);
     
-    --danger: #dc2626;
-    --danger-light: #fef2f2;
-    --danger-border: #fecaca;
+    --danger: #ef4444;
+    --danger-light: rgba(239, 68, 68, 0.15);
+    --danger-border: rgba(239, 68, 68, 0.3);
 
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -46,6 +46,11 @@
 body {
     font-family: var(--font-sans);
     background-color: var(--bg-app);
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.25), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.25), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.15), transparent 30%);
+    background-attachment: fixed;
     color: var(--text-main);
     line-height: 1.5;
     min-height: 100vh;
@@ -55,8 +60,10 @@ body {
 
 /* Header */
 .app-header {
-    background-color: var(--bg-card);
-    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -135,8 +142,10 @@ body {
 
 /* Nav tabs */
 .main-nav {
-    background-color: var(--bg-card);
-    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .nav-container {
@@ -258,10 +267,12 @@ body {
 
 /* Cards */
 .card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background-color: rgba(30, 41, 59, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
@@ -311,8 +322,8 @@ body {
 }
 
 .pill-btn.active {
-    background-color: #fff;
-    color: var(--primary);
+    background-color: var(--primary);
+    color: #fff;
     font-weight: 600;
     box-shadow: var(--shadow-sm);
 }
@@ -344,7 +355,7 @@ body {
     font-size: 0.88rem;
     font-family: inherit;
     color: var(--text-main);
-    background-color: #fff;
+    background-color: rgba(15, 23, 42, 0.6);
     transition: border-color 0.15s, box-shadow 0.15s;
 }
 
@@ -404,7 +415,7 @@ body {
 }
 
 .btn-outline {
-    background-color: #fff;
+    background-color: rgba(30, 41, 59, 0.5);
     border-color: var(--border-color);
     color: var(--text-main);
 }
@@ -415,7 +426,7 @@ body {
 }
 
 .btn-danger-outline {
-    background-color: #fff;
+    background-color: rgba(30, 41, 59, 0.5);
     border-color: var(--danger-border);
     color: var(--danger);
 }
@@ -519,7 +530,7 @@ body {
     font-size: 0.73rem;
     word-break: break-all;
     color: var(--text-muted);
-    background-color: #fff;
+    background-color: rgba(15, 23, 42, 0.6);
     padding: 0.5rem;
     border-radius: var(--radius-sm);
     border: 1px solid var(--border-color);
@@ -585,18 +596,20 @@ body {
 }
 
 .post-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background-color: rgba(30, 41, 59, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .post-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px 0 rgba(31, 38, 135, 0.12);
 }
 
 .post-card-body {
